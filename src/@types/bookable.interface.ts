@@ -1,0 +1,10 @@
+export interface Bookable {
+  id: number;
+  group: string;
+  title: string;
+  notes: string;
+  sessions: number[];
+  days: number[];
+}
+
+export type BookableGroup = Bookable[];
