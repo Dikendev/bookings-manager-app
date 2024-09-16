@@ -1,0 +1,29 @@
+.bookable-ul li {
+  max-width: 70%;
+  min-width: 60%;
+  list-style-type: none;
+}
+
+.bookable-ul li button {
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.selected button {
+  background-color: rgb(255, 98, 0);
+  color: #000000;
+}
+
+.btn {
+  background-color: rgb(255, 98, 0);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,65 @@
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0.1rem;
+  width: 100%;
+  height: fit-content;
+  background-color: #010d7c;
+}
+
+header .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header .list li {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+}
+
+header .list li a {
+  text-decoration: none;
+}
+
+header .list li:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.header_button {
+  width: 5rem;
+}
+
+.header .header_button {
+  background-color: rgb(29, 30, 33);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  padding: 0.3rem;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.header .header_button:hover {
+  background-color: rgb(255, 166, 0);
+  color: black;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.header .button .icon {
+  align-items: center;
+}
+
+.header .button:hover {
+  background-color: rgb(255, 179, 0);
+}
