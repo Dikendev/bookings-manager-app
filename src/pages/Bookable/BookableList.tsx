@@ -4,17 +4,17 @@ import React from "react";
 
 interface BookableListProps {
   indexList: number;
-  books: Bookable[];
+  booksByGroup: Bookable[];
   group: string;
-  groups: string[];
+  groups: (string | number)[];
   changeBookableOnClick: (index: number) => void;
   nextBookable: (index: number, books: Bookable[]) => void;
   onChangeGroup: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const BookableList: React.FC<BookableListProps> = ({
-  books,
   indexList,
+  booksByGroup,
   group,
   groups,
   changeBookableOnClick,
@@ -22,7 +22,7 @@ const BookableList: React.FC<BookableListProps> = ({
   onChangeGroup,
 }) => {
   return (
-    <>
+    <div className="bookable_list">
       <select value={group} onChange={(event) => onChangeGroup(event)}>
         {groups.map((group) => {
           return (
@@ -33,7 +33,7 @@ const BookableList: React.FC<BookableListProps> = ({
         })}
       </select>
       <ul className="bookable-ul">
-        {books.map((book, index) => (
+        {booksByGroup.map((book, index) => (
           <li
             key={book.id}
             className={indexList === index ? "selected" : undefined}
@@ -46,13 +46,13 @@ const BookableList: React.FC<BookableListProps> = ({
       </ul>
       <button
         className="btn"
-        onClick={() => nextBookable(indexList, books)}
+        onClick={() => nextBookable(indexList, booksByGroup)}
         autoFocus
       >
         <FaArrowRight />
         <span>Next</span>
       </button>
-    </>
+    </div>
   );
 };
 

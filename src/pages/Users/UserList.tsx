@@ -13,7 +13,7 @@ const UserList: React.FC<UserList> = ({ users }) => {
   };
 
   return (
-    <>
+    <div>
       <div>
         <label htmlFor="user">Users</label>
         <select onChange={(e) => handleUserChange(e)}>
@@ -25,7 +25,7 @@ const UserList: React.FC<UserList> = ({ users }) => {
         </select>
       </div>
       <div>{`Selected user: ${userSelected}`}</div>
-    </>
+    </div>
   );
 };
 
