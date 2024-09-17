@@ -27,3 +27,18 @@
   padding: 10px;
   cursor: pointer;
 }
+
+.bookable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bookable_list {
+  width: 100%;
+}
+
+.hasDetails_empty {
+  width: 10rem;
+  height: 12rem;
+}

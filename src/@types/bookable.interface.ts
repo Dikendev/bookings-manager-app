@@ -7,4 +7,6 @@ export interface Bookable {
   days: number[];
 }
 
+export type BookKeys = keyof Omit<Bookable, "sessions" | "days">;
+
 export type BookableGroup = Bookable[];
