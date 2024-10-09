@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { Bookable } from "../../@types/bookable.interface";
 
 interface BookableDetailsProps {
@@ -7,7 +7,7 @@ interface BookableDetailsProps {
   setHasDetails: (e: boolean) => void;
 }
 
-export const BookableDetails: React.FC<BookableDetailsProps> = (
+export const BookableDetails: FC<BookableDetailsProps> = (
   props: BookableDetailsProps
 ) => {
   return (

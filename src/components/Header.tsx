@@ -1,6 +1,6 @@
 import { FaCalendarAlt, FaDoorOpen, FaUsers } from "react-icons/fa";
 
-export const Header = () => {
+const Header = () => {
   return (
     <header>
       <nav>
@@ -35,4 +35,4 @@ export const Header = () => {
   );
 };
 
-Header.displayName = "Header";
+export default Header;

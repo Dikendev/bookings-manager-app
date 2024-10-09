@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import BookableList from "./BookableList";
 import { bookableMock } from "../../bookable-mock";
 import {
@@ -45,7 +45,7 @@ export const Bookable = () => {
     return book.title === room;
   }
 
-  const onChangeGroup = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const onChangeGroup = (event: ChangeEvent<HTMLSelectElement>) => {
     setGroup(event.target.value);
     setState((prevState) => ({ ...prevState, indexList: 0 }));
     setHasDetails(false);

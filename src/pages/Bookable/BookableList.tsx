@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { Bookable } from "../../@types/bookable.interface";
-import React from "react";
+import { ChangeEvent, FC } from "react";
 
 interface BookableListProps {
   indexList: number;
@@ -9,10 +9,10 @@ interface BookableListProps {
   groups: (string | number)[];
   changeBookableOnClick: (index: number) => void;
   nextBookable: (index: number, books: Bookable[]) => void;
-  onChangeGroup: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChangeGroup: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const BookableList: React.FC<BookableListProps> = ({
+const BookableList: FC<BookableListProps> = ({
   indexList,
   booksByGroup,
   group,

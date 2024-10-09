@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import { Users } from "../../@types/user.interface";
 
 export interface UserList {
   users: Users;
 }
 
-const UserList: React.FC<UserList> = ({ users }) => {
+const UserList: FC<UserList> = ({ users }) => {
   const [userSelected, setUserSelected] = useState<string>(users[0].name);
 
   const handleUserChange = (event: ChangeEvent<HTMLSelectElement>) => {
